@@ -16,3 +16,6 @@ script:
   - echo "script end"
 after_success:
   - codecov
+  - python3 -m flake8 fracdiff
+  - python3 -m black --check fracdiff
+  - python3 -m isort --check --force-single-line-imports fracdiff
